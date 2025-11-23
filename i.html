@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Sports Performance</title>
+    <style>
+        /* --- 1. CORPORATE BRAND GUIDELINES (UPDATE HERE) --- */
+        :root {
+            /* Replace these HEX codes with your client's colors */
+            --brand-primary: #D4AF37; /* Gold accent for elegance */
+            --brand-dark: #0a0a0a;    /* Deep Black for background */
+            --brand-light: #f4f4f4;   /* Off-white for text */
+            --brand-gray: #1f1f1f;    /* Secondary background */
+            
+            /* Typography */
+            --font-heading: 'Oswald', sans-serif; /* Strong, tall font */
+            --font-body: 'Montserrat', sans-serif; /* Clean, legible font */
+        }
+
+        /* --- 2. GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--brand-dark);
+            color: var(--brand-light);
+            font-family: var(--font-body);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- 3. HEADER / NAV --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--brand-primary);
+            border: 2px solid var(--brand-primary);
+            padding: 5px 15px;
+        }
+
+        nav ul { display: flex; gap: 30px; }
+        nav a:hover { color: var(--brand-primary); }
+
+        /* --- 4. HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            /* Gradient overlay for elegance + text readability */
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            border-left: 5px solid var(--brand-primary);
+            padding-left: 30px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 40px;
+            background-color: var(--brand-primary);
+            color: var(--brand-dark);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--brand-light);
+            transform: translateY(-3px);
+        }
+
+        /* --- 5. STATS GRID --- */
+        .stats-section {
+            padding: 80px 5%;
+            background-color: var(--brand-gray);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 3rem;
+            color: var(--brand-primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        /* --- 6. FEATURE SPLIT --- */
+        .feature-split {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .feature-image, .feature-text {
+            flex: 1 1 400px;
+            min-height: 500px;
+        }
+
+        .feature-image {
+            background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop') center/cover;
+        }
+
+        .feature-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+            background-color: var(--brand-dark);
+        }
+
+        .feature-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--brand-light);
+        }
+
+        .feature-text span {
+            color: var(--brand-primary);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            header { padding: 20px; }
+            nav { display: none; /* Simple hide for template */ }
+        }
+        
+        /* Font Imports */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ATHLETICS</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">Athletes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Redefine Your<br>Limits.</h1>
+            <p>Precision training for elite performance. We combine data science with world-class coaching to unlock your full potential.</p>
+            <a href="#" class="cta-btn">Start Training</a>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stat-card">
+            <h3>50+</h3>
+            <p>Elite Coaches</p>
+        </div>
+        <div class="stat-card">
+            <h3>12k</h3>
+            <p>Athletes Trained</p>
+        </div>
+        <div class="stat-card">
+            <h3>100%</h3>
+            <p>Performance Gain</p>
+        </div>
+    </section>
+
+    <section class="feature-split">
+        <div class="feature-image"></div>
+        <div class="feature-text">
+            <span>The Methodology</span>
+            <h2>Data-Driven<br>Excellence</h2>
+            <p>We don't guess. We measure. Utilizing the latest in biometric tracking and motion analysis, we build a roadmap specifically for your physiology.</p>
+        </div>
+    </section>
+
+</body>
+</html>
